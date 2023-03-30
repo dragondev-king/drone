@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Drone</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    Dron Body
+    <div class="drone">
+      <div class="drone-inner">
+        <div class="rotor" data-rotor="top left">
+          <div class="rotorAxis"></div>
+        </div>
+        <div class="rotor" data-rotor="top right">
+          <div class="rotorAxis"></div>
+        </div>
+        <div class="rotor" data-rotor="bottom left">
+          <div class="rotorAxis"></div>
+        </div>
+        <div class="rotor" data-rotor="bottom right">
+          <div class="rotorAxis"></div>
+        </div>
+        <div class="droneBodyContainer">
+          <div class="droneBody"></div>
+          <div class="dronePillarLeft"></div>
+          <div class="dronePillarRight"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./js/animation.js"></script>
   </body>
-  <script type="text/javascript" src="./js/animation.js"></script>
 </html>

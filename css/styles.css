@@ -1,0 +1,112 @@
+body {
+  position: relative;
+}
+h1 {
+  font-family: 'Lucida Sans'
+}
+.drone {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 100px;
+  left: 100px;
+  perspective: 1000px;
+}
+.drone-inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.droneBodyContainer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+.droneBody {
+  border-radius: 100%;
+  background-color: black;
+  background-clip: content-box;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.dronePillarLeft {
+  position: absolute;
+  top: -45px;
+  right: 46%;
+  height: 147%;
+  width: 15px;
+  background-color: black;
+  rotate: -45deg
+}
+.dronePillarRight {
+  position: absolute;
+  top: -45px;
+  right: 46%;
+  height: 147%;
+  width: 15px;
+  background-color: black;
+  rotate: 45deg
+}
+@keyframes rotor {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.rotor {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  animation: rotor 0.2s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rotorAxis {
+  background-color: black;
+  border-radius: 100%;
+  width: 30%;
+  height: 30%;
+}
+.rotor::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 100%;
+  background: black;
+  border-radius: 50%;
+}
+.rotor::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 50%;
+}
+[data-rotor="top left"]{
+  top: -50px;
+  left: -50px;
+}
+[data-rotor="top right"]{
+  top: -50px;
+  right: -50px;
+}
+[data-rotor="bottom left"]{
+  bottom: -50px;
+  left: -50px;
+}
+[data-rotor="bottom right"]{
+  bottom: -50px;
+  right: -50px;
+}
